@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>German Foundation Sylhet | সিলেটের সেরা জার্মান ভাষা শিক্ষা প্রতিষ্ঠান</title>
+  <meta name="description" content="জার্মান ফাউন্ডেশন সিলেট - সিলেটের প্রথম ও সেরা জার্মান ভাষা শিক্ষা প্রতিষ্ঠান। A1 থেকে C1 পর্যন্ত সকল কোর্স পাওয়া যায়।" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --teal: #00c9a7;
+      --teal-dark: #00a88c;
+      --teal-light: #e0faf5;
+      --black: #111111;
+      --gray-dark: #222222;
+      --gray: #555555;
+      --gray-light: #f5f5f5;
+      --white: #ffffff;
+      --font-bn: 'Hind Siliguri', sans-serif;
+      --font-en: 'Inter', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-bn); color: var(--black); background: var(--white); }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--black);
+      color: #ccc;
+      font-size: 13px;
+      padding: 8px 0;
+    }
+    .topbar .inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .topbar a { color: #ccc; transition: color .2s; }
+    .topbar a:hover { color: var(--teal); }
+    .topbar .socials a {
+      margin-left: 12px;
+      font-size: 14px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--white);
+      box-shadow: 0 2px 12px rgba(0,0,0,.08);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo img { height: 52px; width: 52px; border-radius: 50%; }
+    .logo-text h1 {
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--black);
+      font-family: var(--font-en);
+    }
+    .logo-text span {
+      font-size: 12px;
+      color: var(--teal-dark);
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 4px;
+      align-items: center;
+    }
+    .nav-links > li > a {
+      padding: 8px 13px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gray-dark);
+      border-radius: 6px;
+      transition: all .2s;
+      display: block;
+    }
+    .nav-links > li > a:hover { background: var(--teal-light); color: var(--teal-dark); }
+
+    .nav-links .dropdown { position: relative; }
+    .nav-links .dropdown .submenu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0;
+      background: var(--white);
+      border-radius: 10px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.12);
+      min-width: 200px;
+      padding: 8px;
+      z-index: 100;
+    }
+    .nav-links .dropdown:hover .submenu { display: block; }
+    .submenu li { list-style: none; }
+    .submenu li a {
+      display: block;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gray-dark);
+      border-radius: 6px;
+      transition: all .2s;
+    }
+    .submenu li a:hover { background: var(--teal-light); color: var(--teal-dark); }
+
+    .btn-enroll {
+      background: var(--teal);
+      color: var(--white) !important;
+      padding: 10px 20px !important;
+      border-radius: 8px !important;
+      font-weight: 700 !important;
+      font-size: 14px !important;
+      transition: background .2s !important;
+    }
+    .btn-enroll:hover { background: var(--teal-dark) !important; }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--black);
+    }
+
+    /* ── HERO SLIDER ── */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      height: 560px;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      transition: opacity .8s ease;
+      pointer-events: none;
+    }
+    .slide.active { opacity: 1; pointer-events: auto; }
+    .slide-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+    }
+    .slide-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,.7) 0%, rgba(0,150,120,.4) 100%);
+    }
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 40px;
+      color: var(--white);
+    }
+    .slide-eyebrow {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 16px;
+      font-family: var(--font-en);
+    }
+    .slide-content h2 {
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      font-family: var(--font-en);
+    }
+    .slide-content p {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 28px;
+      max-width: 540px;
+      opacity: .9;
+    }
+    .slide-btn {
+      display: inline-block;
+      background: var(--teal);
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: background .2s, transform .2s;
+    }
+    .slide-btn:hover { background: var(--teal-dark); transform: translateY(-2px); }
+    .hero-dots {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      z-index: 10;
+    }
+    .hero-dots span {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.4);
+      cursor: pointer;
+      transition: background .3s;
+    }
+    .hero-dots span.active { background: var(--teal); }
+
+    /* ── UPCOMING BATCH TICKER ── */
+    .ticker-bar {
+      background: var(--teal);
+      color: var(--white);
+      padding: 10px 0;
+      overflow: hidden;
+    }
+    .ticker-inner {
+      display: flex;
+      gap: 60px;
+      animation: tickerScroll 30s linear infinite;
+      white-space: nowrap;
+    }
+    .ticker-inner span { font-size: 14px; font-weight: 600; }
+    .ticker-inner span i { margin-right: 6px; }
+    @keyframes tickerScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── SECTION COMMONS ── */
+    section { padding: 80px 0; }
+    .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal-dark);
+      margin-bottom: 10px;
+      font-family: var(--font-en);
+    }
+    .section-title {
+      font-size: clamp(26px, 4vw, 42px);
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--black);
+      margin-bottom: 16px;
+      font-family: var(--font-en);
+    }
+    .section-title span { color: var(--teal); }
+    .section-sub {
+      font-size: 16px;
+      color: var(--gray);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+    .section-header { margin-bottom: 48px; }
+    .section-header.center { text-align: center; }
+    .section-header.center .section-sub { margin: 0 auto; }
+
+    /* ── STATS BAR ── */
+    .stats-bar { background: var(--black); padding: 50px 0; }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 32px;
+      text-align: center;
+    }
+    .stat-item {}
+    .stat-num {
+      font-size: 42px;
+      font-weight: 900;
+      color: var(--teal);
+      font-family: var(--font-en);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 14px;
+      color: #aaa;
+      margin-top: 6px;
+    }
+
+    /* ── COURSES ── */
+    .courses-section { background: var(--gray-light); }
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .course-card {
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,.06);
+      transition: transform .3s, box-shadow .3s;
+      border: 1px solid #eee;
+    }
+    .course-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,201,167,.15); }
+    .course-card-top {
+      background: linear-gradient(135deg, var(--teal) 0%, #00a88c 100%);
+      padding: 24px;
+      color: var(--white);
+    }
+    .course-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      opacity: .85;
+      margin-bottom: 8px;
+      font-family: var(--font-en);
+    }
+    .course-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 4px;
+      font-family: var(--font-en);
+    }
+    .course-duration { font-size: 13px; opacity: .8; }
+    .course-body { padding: 22px; }
+    .course-fee {
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--black);
+      margin-bottom: 16px;
+      font-family: var(--font-en);
+    }
+    .course-fee span { font-size: 14px; font-weight: 500; color: var(--gray); }
+    .course-features { list-style: none; margin-bottom: 20px; }
+    .course-features li {
+      font-size: 14px;
+      padding: 6px 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gray-dark);
+    }
+    .course-features li i { color: var(--teal); font-size: 12px; }
+    .btn-course {
+      display: block;
+      text-align: center;
+      background: var(--teal-light);
+      color: var(--teal-dark);
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: all .2s;
+    }
+    .btn-course:hover { background: var(--teal); color: var(--white); }
+
+    /* ── WHY US ── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .why-card {
+      background: var(--white);
+      border: 1px solid #e8e8e8;
+      border-radius: 14px;
+      padding: 28px;
+      transition: border-color .3s, box-shadow .3s;
+    }
+    .why-card:hover { border-color: var(--teal); box-shadow: 0 6px 30px rgba(0,201,167,.1); }
+    .why-num {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--teal);
+      font-family: var(--font-en);
+      margin-bottom: 12px;
+    }
+    .why-title { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+    .why-desc { font-size: 14px; color: var(--gray); line-height: 1.7; }
+
+    /* ── SUCCESS STORIES ── */
+    .success-section { background: var(--black); }
+    .success-section .section-title { color: var(--white); }
+    .success-section .section-label { color: var(--teal); }
+    .success-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .success-card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      border: 1px solid #2a2a2a;
+      transition: border-color .3s;
+    }
+    .success-card:hover { border-color: var(--teal); }
+    .success-avatar {
+      width: 72px; height: 72px;
+      background: var(--teal);
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--white);
+      font-family: var(--font-en);
+    }
+    .success-band {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--teal);
+      font-family: var(--font-en);
+      margin-bottom: 4px;
+    }
+    .success-name { font-size: 14px; color: #ccc; font-weight: 600; }
+    .success-course { font-size: 12px; color: #666; margin-top: 4px; }
+
+    /* ── BATCH SCHEDULE ── */
+    .batch-section { background: var(--teal-light); }
+    .batch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 18px;
+    }
+    .batch-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-left: 4px solid var(--teal);
+      box-shadow: 0 2px 12px rgba(0,0,0,.05);
+    }
+    .batch-info h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .batch-info p { font-size: 13px; color: var(--gray); }
+    .batch-info .seats {
+      font-size: 11px;
+      background: #fff3e0;
+      color: #e67e22;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 6px;
+    }
+    .batch-btn {
+      background: var(--teal);
+      color: var(--white);
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: background .2s;
+    }
+    .batch-btn:hover { background: var(--teal-dark); }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section { background: var(--white); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: var(--gray-light);
+      border-radius: 14px;
+      padding: 28px;
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '"';
+      font-size: 80px;
+      color: var(--teal);
+      opacity: .15;
+      position: absolute;
+      top: 10px; left: 20px;
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+    .testimonial-text {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--gray-dark);
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .t-avatar {
+      width: 44px; height: 44px;
+      background: var(--teal);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700;
+      color: var(--white);
+      font-family: var(--font-en);
+    }
+    .t-name { font-weight: 700; font-size: 15px; }
+    .t-course { font-size: 12px; color: var(--gray); }
+    .t-stars { color: #f39c12; font-size: 13px; margin-top: 2px; }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(135deg, #00c9a7 0%, #00a88c 50%, #007a6a 100%);
+      padding: 80px 0;
+      text-align: center;
+      color: var(--white);
+    }
+    .cta-banner h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 900;
+      margin-bottom: 16px;
+      font-family: var(--font-en);
+    }
+    .cta-banner p { font-size: 17px; opacity: .9; margin-bottom: 32px; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--white);
+      color: var(--teal-dark);
+      padding: 16px 40px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 16px;
+      transition: transform .2s;
+      font-family: var(--font-en);
+    }
+    .cta-btn:hover { transform: translateY(-3px); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black);
+      color: #bbb;
+      padding: 60px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+    .footer-brand {}
+    .footer-brand .logo { margin-bottom: 16px; }
+    .footer-brand .logo img { height: 56px; width: 56px; }
+    .footer-brand p { font-size: 14px; line-height: 1.8; color: #999; }
+    .footer-brand .footer-contact {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer-brand .footer-contact a {
+      font-size: 14px;
+      color: #bbb;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color .2s;
+    }
+    .footer-brand .footer-contact a:hover { color: var(--teal); }
+    .footer-brand .footer-contact a i { color: var(--teal); width: 16px; }
+
+    .footer-col h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 18px;
+      font-family: var(--font-en);
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a {
+      font-size: 14px;
+      color: #999;
+      transition: color .2s;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .footer-col ul li a:hover { color: var(--teal); }
+    .footer-col ul li a::before {
+      content: '→';
+      font-size: 11px;
+      color: var(--teal);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-social a {
+      width: 38px; height: 38px;
+      background: #222;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #bbb;
+      font-size: 15px;
+      transition: all .2s;
+    }
+    .footer-social a:hover { background: var(--teal); color: var(--white); }
+
+    .footer-bottom {
+      border-top: 1px solid #222;
+      padding: 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+    }
+    .footer-bottom a { color: #999; margin: 0 8px; transition: color .2s; }
+    .footer-bottom a:hover { color: var(--teal); }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+    }
+    .wa-float a {
+      background: #25D366;
+      color: var(--white);
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+      box-shadow: 0 4px 20px rgba(37,211,102,.4);
+      transition: transform .2s;
+    }
+    .wa-float a:hover { transform: scale(1.1); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .hamburger { display: block; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 72px; left: 0; right: 0;
+        background: var(--white);
+        box-shadow: 0 8px 30px rgba(0,0,0,.1);
+        padding: 16px;
+        gap: 4px;
+      }
+      .nav-links.open { display: flex; }
+      .submenu { position: static; box-shadow: none; padding-left: 12px; }
+      .hero { height: 460px; }
+      .slide-content { padding: 0 20px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="inner">
+    <div>
+      <a href="tel:+8801XXXXXXXXX"><i class="fas fa-phone-alt"></i> +880 1XXX-XXXXXX</a>
+      &nbsp;&nbsp;
+      <a href="mailto:info@germanfoundationsylhet.com"><i class="fas fa-envelope"></i> info@germanfoundationsylhet.com</a>
+    </div>
+    <div class="socials">
+      <a href="https://www.facebook.com/gfsbyamir" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/8801XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo">
+      <!-- Replace src with your actual logo path in WordPress: <?php echo get_template_directory_uri(); ?>/images/logo.png -->
+      <img src="https://i.imgur.com/placeholder.png" alt="GFS Logo" id="nav-logo" onerror="this.style.background='#00c9a7';this.style.padding='8px';this.style.borderRadius='50%'" />
+      <div class="logo-text">
+        <h1>German Foundation Sylhet</h1>
+        <span>সিলেটের সেরা জার্মান ভাষা ইন্সটিটিউট</span>
+      </div>
+    </div>
+
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="#">হোম</a></li>
+      <li class="dropdown">
+        <a href="#">আমাদের সম্পর্কে ▾</a>
+        <ul class="submenu">
+          <li><a href="#">কেন আমাদের বেছে নেবেন?</a></li>
+          <li><a href="#">আমাদের সাফল্য</a></li>
+          <li><a href="#">ছবির গ্যালারি</a></li>
+          <li><a href="#">ভিডিও গ্যালারি</a></li>
+        </ul>
+      </li>
+      <li><a href="#">কোর্সসমূহ</a></li>
+      <li><a href="#">স্টাডি ম্যাটেরিয়াল</a></li>
+      <li><a href="#">ব্লগ</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#" class="btn-enroll">ভর্তি হন</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO SLIDER -->
+<section class="hero">
+  <!-- Slide 1 -->
+  <div class="slide active">
+    <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&auto=format')"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <p class="slide-eyebrow">🇩🇪 সিলেটের প্রথম পেশাদার জার্মান ভাষা কোর্স</p>
+      <h2>জার্মান ভাষা শিখুন,<br/>স্বপ্নের দেশে যান</h2>
+      <p>A1 থেকে C1 — সকল লেভেলে জার্মান ভাষা শিক্ষা। অভিজ্ঞ শিক্ষক, আধুনিক পদ্ধতি, নিশ্চিত ফলাফল।</p>
+      <a href="#" class="slide-btn">এখনই ভর্তি হন →</a>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide">
+    <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=1600&auto=format')"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <p class="slide-eyebrow">🎓 গোয়েথে ইন্সটিটিউট পরীক্ষার প্রস্তুতি</p>
+      <h2>Goethe Zertifikat<br/>পরীক্ষায় উত্তীর্ণ হন</h2>
+      <p>বিশেষজ্ঞ শিক্ষকদের গাইডেন্সে গোয়েথে পরীক্ষার জন্য প্রস্তুতি নিন। মক টেস্ট, প্র্যাকটিস সেশন এবং ব্যক্তিগত মনোযোগ।</p>
+      <a href="#" class="slide-btn">কোর্স দেখুন →</a>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slide">
+    <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1560439513-74b037a25d84?w=1600&auto=format')"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <p class="slide-eyebrow">🌍 জার্মানিতে উচ্চশিক্ষা ও ক্যারিয়ার</p>
+      <h2>জার্মানিতে পড়াশোনা ও<br/>কাজের সুযোগ</h2>
+      <p>জার্মান ভাষায় দক্ষতা অর্জন করুন এবং জার্মানি, অস্ট্রিয়া ও সুইজারল্যান্ডে উচ্চশিক্ষা বা ক্যারিয়ারের দরজা খুলুন।</p>
+      <a href="#" class="slide-btn">আরও জানুন →</a>
+    </div>
+  </div>
+
+  <div class="hero-dots">
+    <span class="active" onclick="goToSlide(0)"></span>
+    <span onclick="goToSlide(1)"></span>
+    <span onclick="goToSlide(2)"></span>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-inner">
+    <span><i class="fas fa-calendar-alt"></i> আসন্ন ব্যাচ: A1 কোর্স — ১ জুলাই ২০২৬ | বিকাল ৪:০০টা</span>
+    <span><i class="fas fa-calendar-alt"></i> A2 কোর্স — ৫ জুলাই ২০২৬ | সন্ধ্যা ৬:০০টা</span>
+    <span><i class="fas fa-calendar-alt"></i> B1 কোর্স — ৮ জুলাই ২০২৬ | সকাল ১০:০০টা</span>
+    <span><i class="fas fa-calendar-alt"></i> স্পোকেন জার্মান — ৩ জুলাই ২০২৬ | বিকাল ৫:০০টা</span>
+    <!-- Duplicate for loop -->
+    <span><i class="fas fa-calendar-alt"></i> আসন্ন ব্যাচ: A1 কোর্স — ১ জুলাই ২০২৬ | বিকাল ৪:০০টা</span>
+    <span><i class="fas fa-calendar-alt"></i> A2 কোর্স — ৫ জুলাই ২০২৬ | সন্ধ্যা ৬:০০টা</span>
+    <span><i class="fas fa-calendar-alt"></i> B1 কোর্স — ৮ জুলাই ২০২৬ | সকাল ১০:০০টা</span>
+    <span><i class="fas fa-calendar-alt"></i> স্পোকেন জার্মান — ৩ জুলাই ২০২৬ | বিকাল ৫:০০টা</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num">৫০০+</div>
+        <div class="stat-label">সফল শিক্ষার্থী</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">৯৮%</div>
+        <div class="stat-label">পাসের হার</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">৬+</div>
+        <div class="stat-label">বছরের অভিজ্ঞতা</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">A1–C1</div>
+        <div class="stat-label">সকল লেভেল</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">১০০%</div>
+        <div class="stat-label">ভিসা সাফল্যের হার</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COURSES -->
+<section class="courses-section">
+  <div class="container">
+    <div class="section-header center">
+      <p class="section-label">আমাদের কোর্সসমূহ</p>
+      <h2 class="section-title">জার্মান ভাষার <span>প্রিমিয়াম কোর্স</span></h2>
+      <p class="section-sub">আপনার লক্ষ্য অনুযায়ী সঠিক কোর্স বেছে নিন — শুরু থেকে উন্নত স্তর পর্যন্ত সব কিছু আমাদের কাছে আছে।</p>
+    </div>
+
+    <div class="courses-grid">
+      <!-- A1 -->
+      <div class="course-card">
+        <div class="course-card-top">
+          <p class="course-tag">শুরু থেকে শিখুন</p>
+          <h3 class="course-title">German A1</h3>
+          <p class="course-duration">৩ মাস | ৩৬ ক্লাস</p>
+        </div>
+        <div class="course-body">
+          <div class="course-fee">৮,০০০ ৳ <span>/ কোর্স</span></div>
+          <ul class="course-features">
+            <li><i class="fas fa-check-circle"></i> ৩৬টি ক্লাস</li>
+            <li><i class="fas fa-check-circle"></i> সম্পূর্ণ স্টাডি মেটেরিয়াল</li>
+            <li><i class="fas fa-check-circle"></i> মক পরীক্ষা</li>
+            <li><i class="fas fa-check-circle"></i> ব্যক্তিগত মনোযোগ</li>
+          </ul>
+          <a href="#" class="btn-course">কোর্স দেখুন</a>
+        </div>
+      </div>
+
+      <!-- A2 -->
+      <div class="course-card">
+        <div class="course-card-top" style="background: linear-gradient(135deg,#0097a7,#006064)">
+          <p class="course-tag">মাধ্যমিক স্তর</p>
+          <h3 class="course-title">German A2</h3>
+          <p class="course-duration">৩ মাস | ৩৬ ক্লাস</p>
+        </div>
+        <div class="course-body">
+          <div class="course-fee">৯,০০০ ৳ <span>/ কোর্স</span></div>
+          <ul class="course-features">
+            <li><i class="fas fa-check-circle"></i> ৩৬টি ক্লাস</li>
+            <li><i class="fas fa-check-circle"></i> গ্রামার ফোকাস সেশন</li>
+            <li><i class="fas fa-check-circle"></i> স্পিকিং প্র্যাকটিস</li>
+            <li><i class="fas fa-check-circle"></i> গোয়েথে প্রস্তুতি</li>
+          </ul>
+          <a href="#" class="btn-course">কোর্স দেখুন</a>
+        </div>
+      </div>
+
+      <!-- B1 -->
+      <div class="course-card">
+        <div class="course-card-top" style="background: linear-gradient(135deg,#1565c0,#0d47a1)">
+          <p class="course-tag">উন্নত স্তর</p>
+          <h3 class="course-title">German B1</h3>
+          <p class="course-duration">৩.৫ মাস | ৪২ ক্লাস</p>
+        </div>
+        <div class="course-body">
+          <div class="course-fee">১২,০০০ ৳ <span>/ কোর্স</span></div>
+          <ul class="course-features">
+            <li><i class="fas fa-check-circle"></i> ৪২টি ক্লাস</li>
+            <li><i class="fas fa-check-circle"></i> রাইটিং ও স্পিকিং</li>
+            <li><i class="fas fa-check-circle"></i> গোয়েথে B1 প্রস্তুতি</li>
+            <li><i class="fas fa-check-circle"></i> ৩টি মক পরীক্ষা</li>
+          </ul>
+          <a href="#" class="btn-course">কোর্স দেখুন</a>
+        </div>
+      </div>
+
+      <!-- B2 -->
+      <div class="course-card">
+        <div class="course-card-top" style="background: linear-gradient(135deg,#6a1b9a,#4a148c)">
+          <p class="course-tag">প্রফেশনাল লেভেল</p>
+          <h3 class="course-title">German B2</h3>
+          <p class="course-duration">৪ মাস | ৪৮ ক্লাস</p>
+        </div>
+        <div class="course-body">
+          <div class="course-fee">১৫,০০০ ৳ <span>/ কোর্স</span></div>
+          <ul class="course-features">
+            <li><i class="fas fa-check-circle"></i> ৪৮টি ক্লাস</li>
+            <li><i class="fas fa-check-circle"></i> ক্যারিয়ার জার্মান</li>
+            <li><i class="fas fa-check-circle"></i> টেলিক্লাস অপশন</li>
+            <li><i class="fas fa-check-circle"></i> ভিসা গাইডেন্স</li>
+          </ul>
+          <a href="#" class="btn-course">কোর্স দেখুন</a>
+        </div>
+      </div>
+
+      <!-- Spoken German -->
+      <div class="course-card">
+        <div class="course-card-top" style="background: linear-gradient(135deg,#e65100,#bf360c)">
+          <p class="course-tag">কথা বলুন আত্মবিশ্বাসে</p>
+          <h3 class="course-title">Spoken German</h3>
+          <p class="course-duration">২ মাস | ২৪ ক্লাস</p>
+        </div>
+        <div class="course-body">
+          <div class="course-fee">৬,০০০ ৳ <span>/ কোর্স</span></div>
+          <ul class="course-features">
+            <li><i class="fas fa-check-circle"></i> ২৪টি ক্লাস</li>
+            <li><i class="fas fa-check-circle"></i> দৈনন্দিন কথোপকথন</li>
+            <li><i class="fas fa-check-circle"></i> উচ্চারণ প্রশিক্ষণ</li>
+            <li><i class="fas fa-check-circle"></i> ইন্টারেক্টিভ সেশন</li>
+          </ul>
+          <a href="#" class="btn-course">কোর্স দেখুন</a>
+        </div>
+      </div>
+
+      <!-- Crash Course -->
+      <div class="course-card">
+        <div class="course-card-top" style="background: linear-gradient(135deg,#2e7d32,#1b5e20)">
+          <p class="course-tag">দ্রুত প্রস্তুতি</p>
+          <h3 class="course-title">Crash Course</h3>
+          <p class="course-duration">১ মাস | ২০ ক্লাস</p>
+        </div>
+        <div class="course-body">
+          <div class="course-fee">১০,০০০ ৳ <span>/ কোর্স</span></div>
+          <ul class="course-features">
+            <li><i class="fas fa-check-circle"></i> ইন্টেনসিভ ক্লাস</li>
+            <li><i class="fas fa-check-circle"></i> প্রতিদিন ২.৫ ঘণ্টা</li>
+            <li><i class="fas fa-check-circle"></i> ৫টি মক পরীক্ষা</li>
+            <li><i class="fas fa-check-circle"></i> দ্রুত ফলাফল</li>
+          </ul>
+          <a href="#" class="btn-course">কোর্স দেখুন</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">কেন আমাদের বেছে নেবেন?</p>
+      <h2 class="section-title">German Foundation Sylhet-এর<br/><span>বিশেষত্ব</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <p class="why-num">০১</p>
+        <h3 class="why-title">অভিজ্ঞ শিক্ষক মণ্ডলী</h3>
+        <p class="why-desc">আমাদের শিক্ষকরা জার্মানিতে পড়াশোনা ও কাজের বাস্তব অভিজ্ঞতাসম্পন্ন। তারা শুধু ভাষা নয়, জার্মান সংস্কৃতিও শেখান।</p>
+      </div>
+      <div class="why-card">
+        <p class="why-num">০২</p>
+        <h3 class="why-title">গোয়েথে সার্টিফিকেট প্রস্তুতি</h3>
+        <p class="why-desc">আন্তর্জাতিকভাবে স্বীকৃত Goethe-Zertifikat পরীক্ষার বিশেষ প্রস্তুতি নিন আমাদের কাছে।</p>
+      </div>
+      <div class="why-card">
+        <p class="why-num">০৩</p>
+        <h3 class="why-title">ছোট ব্যাচ, বেশি মনোযোগ</h3>
+        <p class="why-desc">প্রতি ব্যাচে সীমিত আসন — প্রতিটি শিক্ষার্থী ব্যক্তিগত মনোযোগ এবং ফিডব্যাক পান।</p>
+      </div>
+      <div class="why-card">
+        <p class="why-num">০৪</p>
+        <h3 class="why-title">ভিসা ও স্কলারশিপ গাইডেন্স</h3>
+        <p class="why-desc">জার্মান ভাষা শেখার পাশাপাশি ভিসা আবেদন, স্কলারশিপ ও বিশ্ববিদ্যালয় ভর্তিতে সহায়তা পাবেন।</p>
+      </div>
+      <div class="why-card">
+        <p class="why-num">০৫</p>
+        <h3 class="why-title">অনলাইন ও অফলাইন ক্লাস</h3>
+        <p class="why-desc">আপনার সুবিধামতো অনলাইন বা সরাসরি ক্লাসে অংশ নিন — উভয় পদ্ধতিতে মানসম্পন্ন শিক্ষা নিশ্চিত।</p>
+      </div>
+      <div class="why-card">
+        <p class="why-num">০৬</p>
+        <h3 class="why-title">সিলেটে অবস্থিত</h3>
+        <p class="why-desc">ঢাকায় না গিয়েই সিলেট থেকে বিশ্বমানের জার্মান ভাষা শিক্ষা নিন — GFS সিলেটের প্রথম পেশাদার প্রতিষ্ঠান।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS STORIES -->
+<section class="success-section">
+  <div class="container">
+    <div class="section-header center">
+      <p class="section-label">শিক্ষার্থীদের সাফল্য</p>
+      <h2 class="section-title" style="color:#fff">আমাদের <span>সফল শিক্ষার্থীরা</span></h2>
+      <p class="section-sub" style="color:#999; margin:0 auto">তারা আমাদের কাছে জার্মান শিখে আজ জার্মানিতে পড়াশোনা ও কাজ করছেন।</p>
+    </div>
+    <div class="success-grid">
+      <div class="success-card">
+        <div class="success-avatar">RA</div>
+        <div class="success-band">B2</div>
+        <div class="success-name">Rifat Ahmed</div>
+        <div class="success-course">জার্মানিতে পড়াশোনা, ২০২৪</div>
+      </div>
+      <div class="success-card">
+        <div class="success-avatar">SM</div>
+        <div class="success-band">B1</div>
+        <div class="success-name">Sumaiya Mitu</div>
+        <div class="success-course">Goethe B1, ২০২৪</div>
+      </div>
+      <div class="success-card">
+        <div class="success-avatar">TH</div>
+        <div class="success-band">C1</div>
+        <div class="success-name">Tanvir Hossain</div>
+        <div class="success-course">কাজের ভিসা, ২০২৫</div>
+      </div>
+      <div class="success-card">
+        <div class="success-avatar">NI</div>
+        <div class="success-band">B2</div>
+        <div class="success-name">Nadia Islam</div>
+        <div class="success-course">TU Munich ভর্তি, ২০২৫</div>
+      </div>
+      <div class="success-card">
+        <div class="success-avatar">KA</div>
+        <div class="success-band">B1</div>
+        <div class="success-name">Karim Abdullah</div>
+        <div class="success-course">Goethe B1, ২০২৫</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UPCOMING BATCH SCHEDULE -->
+<section class="batch-section">
+  <div class="container">
+    <div class="section-header center">
+      <p class="section-label">আসন্ন ব্যাচ</p>
+      <h2 class="section-title">এখনই ভর্তি হন — <span>আসন সীমিত!</span></h2>
+    </div>
+    <div class="batch-grid">
+      <div class="batch-card">
+        <div class="batch-info">
+          <h4>German A1</h4>
+          <p><i class="fas fa-calendar"></i> ১ জুলাই ২০২৬ | বিকাল ৪:০০টা</p>
+          <span class="seats">কয়েকটি আসন বাকি</span>
+        </div>
+        <a href="#" class="batch-btn">ভর্তি হন</a>
+      </div>
+      <div class="batch-card">
+        <div class="batch-info">
+          <h4>German A2</h4>
+          <p><i class="fas fa-calendar"></i> ৫ জুলাই ২০২৬ | সন্ধ্যা ৬:০০টা</p>
+          <span class="seats">কয়েকটি আসন বাকি</span>
+        </div>
+        <a href="#" class="batch-btn">ভর্তি হন</a>
+      </div>
+      <div class="batch-card">
+        <div class="batch-info">
+          <h4>German B1</h4>
+          <p><i class="fas fa-calendar"></i> ৮ জুলাই ২০২৬ | সকাল ১০:০০টা</p>
+          <span class="seats">কয়েকটি আসন বাকি</span>
+        </div>
+        <a href="#" class="batch-btn">ভর্তি হন</a>
+      </div>
+      <div class="batch-card">
+        <div class="batch-info">
+          <h4>Spoken German</h4>
+          <p><i class="fas fa-calendar"></i> ৩ জুলাই ২০২৬ | বিকাল ৫:০০টা</p>
+          <span class="seats">কয়েকটি আসন বাকি</span>
+        </div>
+        <a href="#" class="batch-btn">ভর্তি হন</a>
+      </div>
+      <div class="batch-card">
+        <div class="batch-info">
+          <h4>Crash Course (B1)</h4>
+          <p><i class="fas fa-calendar"></i> ১০ জুলাই ২০২৬ | রাত ৮:০০টা</p>
+          <span class="seats">কয়েকটি আসন বাকি</span>
+        </div>
+        <a href="#" class="batch-btn">ভর্তি হন</a>
+      </div>
+      <div class="batch-card">
+        <div class="batch-info">
+          <h4>German A1 (Online)</h4>
+          <p><i class="fas fa-calendar"></i> ১৫ জুলাই ২০২৬ | সন্ধ্যা ৭:০০টা</p>
+          <span class="seats">কয়েকটি আসন বাকি</span>
+        </div>
+        <a href="#" class="batch-btn">ভর্তি হন</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-header center">
+      <p class="section-label">শিক্ষার্থীরা কী বলেন</p>
+      <h2 class="section-title">আমাদের <span>শিক্ষার্থীদের মতামত</span></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-text">GFS-এ A1 ও A2 করার পর Goethe পরীক্ষায় প্রথমবারেই পাস করলাম। স্যারদের পদ্ধতি অসাধারণ — গ্রামার থেকে স্পিকিং সব কিছু খুব সুন্দরভাবে শেখানো হয়।</p>
+        <div class="testimonial-author">
+          <div class="t-avatar">RA</div>
+          <div>
+            <p class="t-name">Rafiqul Alam</p>
+            <p class="t-course">German A2 কোর্স সম্পন্ন</p>
+            <p class="t-stars">★★★★★</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">সিলেটে এই মানের জার্মান ভাষা শেখানোর প্রতিষ্ঠান আগে ছিল না। GFS-এর কারণে এখন আর ঢাকা যাওয়া লাগে না। আমি B1 পাস করে জার্মানিতে আবেদন করেছি।</p>
+        <div class="testimonial-author">
+          <div class="t-avatar">SB</div>
+          <div>
+            <p class="t-name">Sharmin Begum</p>
+            <p class="t-course">German B1 কোর্স সম্পন্ন</p>
+            <p class="t-stars">★★★★★</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">Crash Course-এ মাত্র ১ মাসে B1 পরীক্ষার জন্য তৈরি হয়ে গেলাম। পরিশ্রমী শিক্ষক এবং সুশৃঙ্খল পাঠদান পদ্ধতি — GFS সত্যিই আলাদা।</p>
+        <div class="testimonial-author">
+          <div class="t-avatar">MK</div>
+          <div>
+            <p class="t-name">Mahmudul Karim</p>
+            <p class="t-course">Crash Course সম্পন্ন</p>
+            <p class="t-stars">★★★★★</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div class="container">
+    <h2>জার্মান ভাষা শিখে আপনার স্বপ্ন পূরণ করুন!</h2>
+    <p>আজই ভর্তি হন এবং আপনার জার্মানি যাওয়ার স্বপ্নের দিকে প্রথম পদক্ষেপ নিন।</p>
+    <a href="https://wa.me/8801XXXXXXXXX" class="cta-btn">📞 এখনই যোগাযোগ করুন</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="https://i.imgur.com/placeholder.png" alt="GFS Logo" style="height:52px;width:52px;border-radius:50%;background:#00c9a7" />
+          <div class="logo-text">
+            <h1 style="color:#fff; font-size:16px">German Foundation Sylhet</h1>
+            <span>জার্মান ভাষা শিক্ষা প্রতিষ্ঠান</span>
+          </div>
+        </div>
+        <p>সিলেটের প্রথম ও সেরা জার্মান ভাষা শিক্ষা প্রতিষ্ঠান। A1 থেকে C1 পর্যন্ত সকল লেভেলে পেশাদার জার্মান ভাষা শিক্ষা প্রদান করি।</p>
+        <div class="footer-contact">
+          <a href="tel:+8801XXXXXXXXX"><i class="fas fa-phone-alt"></i> +880 1XXX-XXXXXX</a>
+          <a href="mailto:info@germanfoundationsylhet.com"><i class="fas fa-envelope"></i> info@germanfoundationsylhet.com</a>
+          <a href="#"><i class="fas fa-map-marker-alt"></i> সিলেট, বাংলাদেশ</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/gfsbyamir" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/8801XXXXXXXXX"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Courses -->
+      <div class="footer-col">
+        <h4>কোর্সসমূহ</h4>
+        <ul>
+          <li><a href="#">German A1</a></li>
+          <li><a href="#">German A2</a></li>
+          <li><a href="#">German B1</a></li>
+          <li><a href="#">German B2</a></li>
+          <li><a href="#">Spoken German</a></li>
+          <li><a href="#">Crash Course</a></li>
+          <li><a href="#">Online Course</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4>দ্রুত লিংক</h4>
+        <ul>
+          <li><a href="#">হোম</a></li>
+          <li><a href="#">আমাদের সম্পর্কে</a></li>
+          <li><a href="#">কোর্সসমূহ</a></li>
+          <li><a href="#">স্টাডি ম্যাটেরিয়াল</a></li>
+          <li><a href="#">শিক্ষার্থী সাফল্য</a></li>
+          <li><a href="#">ব্লগ</a></li>
+          <li><a href="#">যোগাযোগ</a></li>
+        </ul>
+      </div>
+
+      <!-- Map / Address -->
+      <div class="footer-col">
+        <h4>আমাদের অবস্থান</h4>
+        <p style="font-size:14px; color:#999; line-height:1.8; margin-bottom:16px">
+          German Foundation Sylhet<br/>
+          সিলেট, বাংলাদেশ<br/><br/>
+          <strong style="color:#bbb">ক্লাসের সময়:</strong><br/>
+          শনি – বৃহস্পতি<br/>
+          সকাল ৯:০০টা – রাত ১০:০০টা
+        </p>
+        <!-- Embed Google Map iframe here -->
+        <div style="background:#222; border-radius:8px; height:120px; display:flex; align-items:center; justify-content:center; color:#555; font-size:13px;">
+          [ Google Map এখানে যোগ করুন ]
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright &copy; 2026 German Foundation Sylhet. সর্বস্বত্ব সংরক্ষিত।
+    &nbsp;|&nbsp; <a href="#">Terms of Service</a>
+    &nbsp;|&nbsp; <a href="#">Privacy Policy</a>
+    &nbsp;|&nbsp; <a href="#">Refund Policy</a>
+    </p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<div class="wa-float">
+  <a href="https://wa.me/8801XXXXXXXXX" target="_blank" title="WhatsApp এ যোগাযোগ করুন">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+  // Hero Slider
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.hero-dots span');
+
+  function goToSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    currentSlide = n;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  }
+
+  setInterval(() => {
+    goToSlide((currentSlide + 1) % slides.length);
+  }, 5000);
+
+  // Load GFS Logo from uploaded image
+  // In WordPress, replace with: <?php echo get_template_directory_uri(); ?>/images/gfs-logo.png
+  const logoImgs = document.querySelectorAll('img[alt="GFS Logo"]');
+  // The logo will be shown once you replace the src with the actual logo path
+</script>
+
+<!--
+  ╔══════════════════════════════════════════════════════════╗
+  ║  WORDPRESS CUSTOMIZATION GUIDE                          ║
+  ║                                                          ║
+  ║  1. লোগো যোগ করুন:                                      ║
+  ║     img src কে replace করুন:                            ║
+  ║     <?php echo get_template_directory_uri(); ?>/images/ ║
+  ║     gfs-logo.png                                         ║
+  ║                                                          ║
+  ║  2. ফোন নম্বর: 1XXX-XXXXXX → আপনার নম্বর দিয়ে বদলান  ║
+  ║                                                          ║
+  ║  3. Google Map: iframe embed code যোগ করুন              ║
+  ║                                                          ║
+  ║  4. Social Links: # গুলো আপনার লিংক দিয়ে বদলান        ║
+  ║                                                          ║
+  ║  5. কোর্সের দাম ও তারিখ আপডেট করুন                    ║
+  ╚══════════════════════════════════════════════════════════╝
+-->
+
+</body>
+</html>
